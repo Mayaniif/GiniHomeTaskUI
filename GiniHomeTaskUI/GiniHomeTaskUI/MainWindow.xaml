@@ -1,0 +1,30 @@
+﻿<Window x:Class="GiniHomeTaskUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GiniHomeTaskUI" xmlns:local1="clr-namespace:GiniHomeTaskUI.Services"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="616" Width="876">
+
+    <Grid Background="#FF1F243E" Height="616">
+        <Grid HorizontalAlignment="Center" Height="424" Margin="0,127,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.449,0.622" Width="720" Background="#FB2C3248">
+            <Grid.Effect>
+                <DropShadowEffect/>
+            </Grid.Effect>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Margin="20,21,23,32"   Background="#FB191C29" Style="{DynamicResource ScrollBar}" Height="NaN">
+                <TextBlock x:Name="messageTB" HorizontalAlignment="Stretch" 
+         TextWrapping="Wrap" VerticalAlignment="Top" Width="650" Background="#FB191C29" FontSize="16" Text=""/>
+            </ScrollViewer>
+        </Grid>
+        <Grid HorizontalAlignment="Center" Height="39" Margin="0,78,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.449,0.622" Width="720" Background="#FB2C3248">
+            <Grid.Effect>
+                <DropShadowEffect/>
+            </Grid.Effect>
+            <TextBox x:Name="queryTB" HorizontalAlignment="Left" Height="27" Margin="20,0,0,0" TextWrapping="Wrap" Text=""  FontSize="16" Background="#FB191C29" Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" FontWeight="Bold" BorderBrush="{x:Null}" KeyDown="OnKeyDownHandler" VerticalAlignment="Center" Width="335"/>
+            <Button x:Name="searchBN" Content="Search" Style="{DynamicResource RoundCornerNoToggle}" HorizontalAlignment="Left" Height="25" Margin="374,0,0,0" VerticalAlignment="Center" Width="75" Background="#FF3A8728" FontWeight="Bold" FontSize="16" Foreground="#FFFDFBFB" Click="searchBN_Click"  />
+            <Button x:Name="bookmarkBN" Content="Bookmarks" Style="{DynamicResource RoundCornerNoToggle}" HorizontalAlignment="Left" Height="25" Margin="552,4,0,0" VerticalAlignment="Top" Width="145" Background="#FF3A8728" FontWeight="Bold" FontSize="16" Foreground="#FFFDFBFB" Click="bookmarkBN_Click"   />
+        </Grid>
+        <Label Content="GitHub repositories search" HorizontalAlignment="Left" Height="39" Margin="268,23,0,0" VerticalAlignment="Top" Width="299" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" FontSize="24"/>
+    </Grid>
+</Window>
